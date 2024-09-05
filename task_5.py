@@ -1,0 +1,26 @@
+word1 = input("Введите первое слово: ")
+word2 = input("Введите второе слово: ")
+
+if len(word1) != len(word2):
+        print("Слова не является анаграммами")
+
+else:
+    char_count1 = {}
+    char_count2 = {}
+
+    for char in word1:
+        if char in char_count1:
+           char_count1[char] += 1
+        else:
+             char_count1[char] = 1
+    
+    for char in word2:
+         if char in char_count2:
+              char_count2 += 1
+         else:
+             char_count2[char] = 1
+
+    if char_count1 == char_count2:
+         print("Слова является анаграммами")
+    else:
+         print("Слова не является анаграммами")
